@@ -1,5 +1,3 @@
-from typing import Dict
-
 import torch.nn as nn
 
 import model_logger_dp as logger
@@ -7,18 +5,28 @@ import model_logger_dp as logger
 from dlts.utils import Registry
 
 
-# def create_model(
-#         model_name: str,
-#         registry: Dict[str, Registry],
-# ) -> nn.Module:
-#
-#     create_fn = registry['model'].get(model_name)
-#     if 'config' in registry.keys():
-#         cfg: Dict = registry['config'].get(model_name)
-#     else:
-#         cfg: Dict = {}
-#     model = create_fn(**cfg)
-#     logger.info(f'Creating model: {model_name} with config: {cfg}')
-#
-#     return model
+MODEL_REGISTRY = Registry(
+    registry_name="model_registry",
+    base_type=nn.Module,
+    lazy_dirs=["dlts/models"],
+)
+
+
+def create_model(
+        model_name: str,
+        **kwargs
+) -> nn.Module:
+    """
+    Create a model instance from the model registry.
+    Args:
+        model_name (str): The name of the model to create.
+        **kwargs: Additional arguments to pass to the model constructor.
+    Returns:
+        nn.Module: An instance of the requested model.
+    """
+    create_fn = MODEL_REGISTRY.get(model_name)
+    model = create_fn(**kwargs)
+    logger.info(f'Creating model: {model_name}')
+
+    return model
 
