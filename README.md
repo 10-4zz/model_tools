@@ -2,10 +2,10 @@
 
 [![Python >= 3.8](https://img.shields.io/badge/python->=3.8-blue.svg)](https://www.python.org/downloads/release/)
 
-A package that contains tools for deep learning model.
+A package that contains tools for deep learning model. We add the registry class which can make developer use the registry method
+to manage their models or functions conveniently.
 
-Now, it just contains registry class for managing your models or functions conveniently.
-
+In other side, we will provide our work in classification task for developer, which can use the model directly.
 ## Installation
 
 ```bash
@@ -28,6 +28,24 @@ def example_function(x: int) -> int:
 
 print(registry.get("example_function")(5))  # Output: 10
 print(registry.keys())  # Output: dict_keys(['example_function'])
+```
+
+## Papers
+- Nutrients 2024, "[A Lightweight Hybrid Model with Location-Preserving ViT for
+Efficient Food Recognition](https://ldu-iiplab.github.io/zh/publication/sheng-2024-lightweight/sheng-2024-lightweight.pdf)"
+
+### BibTex
+```BibTex
+@article{sheng2024lightweight,
+  title={A lightweight hybrid model with location-preserving ViT for efficient food recognition},
+  author={Sheng, Guorui and Min, Weiqing and Zhu, Xiangyi and Xu, Liang and Sun, Qingshuo and Yang, Yancun and Wang, Lili and Jiang, Shuqiang},
+  journal={Nutrients},
+  volume={16},
+  number={2},
+  pages={200},
+  year={2024},
+  publisher={MDPI}
+}
 ```
 
 ## Update
