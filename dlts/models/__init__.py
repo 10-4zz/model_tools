@@ -4,7 +4,7 @@ import torch.nn as nn
 
 import model_logger_dp as logger
 
-from ._registry import Registry
+from dlts.utils import Registry
 
 
 # def create_model(
