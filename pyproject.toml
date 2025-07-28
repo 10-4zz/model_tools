@@ -1,0 +1,27 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "pydlt"
+authors = [
+    {name = "Ian Zhu", email = "IanZhu@m.ldu.edu.cn"},
+]
+description = "Deep Learning Tools for Pytorch"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["python", "tools", "model"]
+license = {text = "MIT"}
+
+dependencies = [
+        'model_logger_dp',
+]
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://github.com/huggingface/pytorch-image-models"
+repository = "https://github.com/huggingface/pytorch-image-models"
+
+[tool.pdm.version]
+source = "file"
+path = "pydlt/version.py"
