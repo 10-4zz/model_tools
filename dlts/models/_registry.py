@@ -16,6 +16,14 @@ class Registry:
             base_type: Union[type, Tuple[Any, ...], Callable]=None,
             lazy_dirs: List[str] =None,
     ) -> None:
+        """
+            Args:
+                registry_name (str): The name of the registry.
+                base_type (Union[type, Tuple[Any, ...], Callable], optional): The base type that registered items must conform to.
+                    If None, no type checking is performed. Defaults to None.
+                lazy_dirs (List[str], optional): List of directories to lazily load modules from.
+                    If None, no lazy loading is performed. Defaults to None.
+        """
         self.registry_name: str = registry_name
         self.base_type: Union[type, Tuple[Any, ...], Callable] = base_type
         self.lazy_dirs = lazy_dirs
