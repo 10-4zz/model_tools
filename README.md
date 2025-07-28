@@ -34,6 +34,8 @@ print(registry.keys())  # Output: dict_keys(['example_function'])
 - Nutrients 2024, "[A Lightweight Hybrid Model with Location-Preserving ViT for
 Efficient Food Recognition](https://ldu-iiplab.github.io/zh/publication/sheng-2024-lightweight/sheng-2024-lightweight.pdf)"
 
+- ![LP ViT Structure](doc/images/LP-ViT.jpg "本地图片示例")
+
 ### BibTex
 ```BibTex
 @article{sheng2024lightweight,
