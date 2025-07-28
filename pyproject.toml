@@ -3,7 +3,7 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 [project]
-name = "pydlt"
+name = "dlts"
 authors = [
     {name = "Ian Zhu", email = "IanZhu@m.ldu.edu.cn"},
 ]
@@ -24,4 +24,4 @@ repository = "https://github.com/10-4zz/model_tools"
 
 [tool.pdm.version]
 source = "file"
-path = "pydlt/version.py"
+path = "dlts/version.py"
