@@ -3,7 +3,6 @@ from typing import Optional, Union
 import torch.nn as nn
 from torch import Tensor
 
-from dlts.layers import get_layer
 from dlts.utils.math_utils import make_divisible
 
 
