@@ -23,3 +23,9 @@ def make_divisible(
     if new_v < 0.9 * v:
         new_v += divisor
     return new_v
+
+
+def bound_fn(
+    min_val: Union[float, int], max_val: Union[float, int], value: Union[float, int]
+) -> Union[float, int]:
+    return max(min_val, min(max_val, value))

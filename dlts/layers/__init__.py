@@ -22,5 +22,9 @@ def get_layer(layer_name: str, **kwargs) -> nn.Module:
     Returns:
         nn.Module: The requested layer.
     """
+    if not layer_name in LAYER_REGISTRY.keys():
+        raise RuntimeError(
+            f"The layer {layer_name} not found in the layer registry. Available layers: {LAYER_REGISTRY.keys()}"
+        )
     layer = LAYER_REGISTRY.get(layer_name)
     return layer(**kwargs) if layer else None
