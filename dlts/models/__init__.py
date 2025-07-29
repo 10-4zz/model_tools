@@ -28,10 +28,10 @@ def create_model(
     Returns:
         nn.Module: An instance of the requested model.
     """
-    if not model_name in MODEL_REGISTRY.keys():
-        raise RuntimeError(
-            f"Model {model_name} not found in the model registry. Available models: {MODEL_REGISTRY.keys()}"
-        )
+    # if not model_name in MODEL_REGISTRY.keys():
+    #     raise RuntimeError(
+    #         f"Model {model_name} not found in the model registry. Available models: {MODEL_REGISTRY.keys()}"
+    #     )
     cfg = get_config(condif_name=model_name)
     create_fn = MODEL_REGISTRY.get(model_name)
     model = create_fn(cfg=cfg, scale=scale, num_class=num_class)
