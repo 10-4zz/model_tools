@@ -14,7 +14,9 @@ keywords = ["python", "tools", "model"]
 license = {text = "MIT"}
 
 dependencies = [
-        'model_logger_dp',
+    'torch',
+    'torchvision',
+    'model_logger_dp',
 ]
 dynamic = ["version"]
 

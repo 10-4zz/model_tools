@@ -51,6 +51,7 @@ Efficient Food Recognition](https://ldu-iiplab.github.io/zh/publication/sheng-20
 ```
 
 ## Update
+- 0.0.2 - We add the EHFR-Net model in the tools.
 - 0.0.1 - It is an official version.
 - 0.0.1alpha2 - It is a test version.
 
