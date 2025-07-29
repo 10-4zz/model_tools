@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 
 class BaseConfig:
@@ -9,5 +9,5 @@ class BaseConfig:
 
         self.config_name = config_name
 
-    def get_config(self, scale: Optional[int, float, str]) -> dict:
+    def get_config(self, scale: Optional[Union[int, float, str, None]]) -> dict:
         raise NotImplementedError()

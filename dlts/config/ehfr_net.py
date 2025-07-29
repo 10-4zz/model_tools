@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 
 from .base_config import BaseConfig
 from dlts.config import CONFIG_REGISTRY
@@ -13,7 +13,7 @@ class EHFRNet(BaseConfig):
     ) -> None:
         super().__init__(config_name=config_name)
 
-    def get_config(self, scale: Optional[int, float, str] = None) -> dict:
+    def get_config(self, scale: Optional[Union[int, float, str, None]] = None) -> dict:
         width_multiplier = scale if scale else 1.0
 
         ffn_multiplier = (

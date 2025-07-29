@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Union
 import torch.nn as nn
 
 import model_logger_dp as logger
@@ -16,7 +16,7 @@ MODEL_REGISTRY = Registry(
 
 def create_model(
         model_name: str,
-        scale: Optional[int, float, str] = 1.0,
+        scale: Optional[Union[int, float, str, None]] = 1.0,
         num_class: int = 101,
 ) -> nn.Module:
     """

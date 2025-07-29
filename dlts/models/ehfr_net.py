@@ -1,4 +1,4 @@
-from typing import Optional, Tuple, Dict
+from typing import Optional, Tuple, Dict, Union
 
 import torch.nn as nn
 from torch import Tensor
@@ -19,7 +19,7 @@ class EHFRNet(nn.Module):
     def __init__(
             self,
             cfg: BaseConfig,
-            scale: Optional[int, float, str] = 1.0,
+            scale: Optional[Union[int, float, str, None]] = 1.0,
             num_class: int = 101,
     ) -> None:
         super(EHFRNet, self).__init__()
