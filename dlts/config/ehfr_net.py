@@ -1,7 +1,7 @@
 from typing import Optional, Union
 
 from .base_config import BaseConfig
-from dlts.config import CONFIG_REGISTRY
+from . import CONFIG_REGISTRY
 from dlts.utils.math_utils import make_divisible, bound_fn
 
 

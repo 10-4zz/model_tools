@@ -5,7 +5,7 @@ from model_logger_dp import logger_decorator as logger
 import torch
 from torch import Tensor
 
-from dlts.layers import LAYER_REGISTRY
+from . import LAYER_REGISTRY
 
 
 @LAYER_REGISTRY.register(name="global_pool")

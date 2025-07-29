@@ -5,7 +5,7 @@ from .base_config import BaseConfig
 CONFIG_REGISTRY = Registry(
     registry_name="model_registry",
     base_type=BaseConfig,
-    lazy_dirs=["dlts/models"],
+    lazy_dirs=["dlts/config"],
 )
 
 

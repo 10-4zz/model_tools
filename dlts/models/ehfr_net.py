@@ -5,7 +5,7 @@ from torch import Tensor
 
 from dlts.config import BaseConfig
 from dlts.modules import HBlock
-from dlts.model import MODEL_REGISTRY
+from . import MODEL_REGISTRY
 from dlts.layers import get_layer
 
 

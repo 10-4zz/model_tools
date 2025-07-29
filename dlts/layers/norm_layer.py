@@ -2,7 +2,7 @@ from typing import Optional
 
 import torch.nn as nn
 
-from dlts.layers import LAYER_REGISTRY
+from . import LAYER_REGISTRY
 
 
 @LAYER_REGISTRY.register(name="layer_norm_2d")
